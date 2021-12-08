@@ -1,0 +1,25 @@
+plugins {
+    id 'org.springframework.boot' version '2.2.0.RELEASE'
+}
+
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+
+jar {
+    baseName = 'spring-boot-docker'
+    version =  '1.0'
+}
+
+repositories {
+    jcenter()
+}
+
+sourceCompatibility = 1.11
+targetCompatibility = 1.11
+
+dependencies {
+    implementation(platform("org.springframework.boot:spring-boot-dependencies:2.2.0.RELEASE"))
+    implementation("org.springframework.boot:spring-boot-starter-web")
+    implementation("org.springframework.boot:spring-boot-starter-test")
+}
+
